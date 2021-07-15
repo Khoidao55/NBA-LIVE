@@ -11,3 +11,4 @@ app.use(express.static('public'));
 app.listen(3000, () => {
   console.log("Listening on 3000, the best server");
 })
+
