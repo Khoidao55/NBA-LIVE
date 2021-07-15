@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./server/server.js",
+    "react-dev": "webpack --watch"
   },
   "repository": {
     "type": "git",
@@ -16,5 +18,28 @@
   "bugs": {
     "url": "https://github.com/Khoidao55/NBA-LIVE/issues"
   },
-  "homepage": "https://github.com/Khoidao55/NBA-LIVE#readme"
+  "homepage": "https://github.com/Khoidao55/NBA-LIVE#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.12",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "webpack": "^5.44.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.6",
+    "@babel/plugin-transform-runtime": "^7.14.5",
+    "@babel/preset-env": "^7.14.7",
+    "@babel/preset-react": "^7.14.5",
+    "babel-loader": "^8.2.2",
+    "webpack-cli": "^4.7.2"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-react",
+      "@babel/preset-env"
+    ]
+  }
 }
