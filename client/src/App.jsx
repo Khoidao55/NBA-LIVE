@@ -1,9 +1,10 @@
 import React from 'react';
+import HomePage from './Components/HomePage/HomePage.jsx';
 
 const App = () => {
   return (
     <div>
-      <h1>Hello World, from Khoi</h1>
+      <HomePage />
     </div>
   )
 }
