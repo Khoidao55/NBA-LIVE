@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import axios from 'axios';
-import LiveFeed from '../LiveFeed/LiveFeed.jsx';
+import LiveFeed from '../LiveFeed/LiveFeed';
 
-const HomePage = () => {
+const HomePage: React.FC = () => {
   return (
     <div>
       <h1>This is the HomePage</h1>

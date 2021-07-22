@@ -1,18 +1,20 @@
 module.exports = {
   mode: 'development',
-  entry: __dirname + '/client/src/index.jsx',
+  entry: __dirname + '/client/src/index.tsx',
+  devtool: 'inline-source-map',
   module: {
     rules: [
       {
-        test: [/\.jsx$/],
+        test: /\.tsx?$/,
+        use: 'ts-loader',
         exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-react', '@babel/preset-env'],
-            "plugins": ["@babel/plugin-transform-runtime"]
-          }
-        }
+        // use: {
+        //   loader: 'babel-loader',
+        //   options: {
+        //     presets: ['@babel/preset-react', '@babel/preset-env'],
+        //     "plugins": ["@babel/plugin-transform-runtime"]
+        //   }
+        // }
       },
       {
         test: /\.(css)$/,
@@ -30,6 +32,9 @@ module.exports = {
         ],
       },
     ]
+  },
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js'],
   },
   devServer: {
     historyApiFallback: true

@@ -1,7 +1,7 @@
 import React from 'react';
-import HomePage from './Components/HomePage/HomePage.jsx';
+import HomePage from './Components/HomePage/HomePage';
 
-const App = () => {
+const App: React.FC = () => {
   return (
     <div>
       <HomePage />
