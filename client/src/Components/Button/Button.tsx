@@ -6,8 +6,8 @@ interface Props {
   children?: any,
   type?: any,
   onClick?: () => {},
-  buttonStyle?: any,
-  buttonSize?: any
+  buttonStyle: string,
+  buttonSize: string
 }
 
 const STYLES: string[] = ['btn--primary', 'btn--outline'];
