@@ -5,7 +5,6 @@ import LiveFeed from '../LiveFeed/LiveFeed';
 const HomePage: React.FC = () => {
   return (
     <div>
-      <h1>This is the HomePage</h1>
       <LiveFeed />
     </div>
   )

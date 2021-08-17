@@ -10,7 +10,9 @@ const App: React.FC = () => {
       <Router>
         <Banner />
         <Switch>
-          <Route path="/" exact />
+          <Route path="/" exact>
+            <HomePage />
+          </Route>
         </Switch>
       </Router>
     </div>
