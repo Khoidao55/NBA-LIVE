@@ -6,8 +6,8 @@ interface Props {
   children?: any,
   type?: any,
   onClick?: () => {},
-  buttonStyle: string,
-  buttonSize: string
+  buttonStyle?: string,
+  buttonSize?: string
 }
 
 const STYLES: string[] = ['btn--primary', 'btn--outline'];
@@ -22,10 +22,11 @@ const Button: React.FC<Props> = ({children, type, onClick, buttonStyle, buttonSi
   ? buttonSize
   : SIZES[0];
 
+  console.log(checkButtonSize);
   return(
     <Link to='/signup' className='btn-mobile'>
       <button
-      className={`btn ${checkButtonStyle} ${checkButtonSize}}`}
+      className={`btn ${checkButtonStyle} ${checkButtonSize}`}
       onClick={onClick}
       type={type}
       >{children}</button>

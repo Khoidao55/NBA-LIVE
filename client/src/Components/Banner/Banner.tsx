@@ -42,7 +42,7 @@ const Banner: React.FC<Props> = () => {
           </li>
           <li className='nav-item'>
             <Link to='/' className="nav-links" onClick={closeMobileMenu}>
-              Player Stats
+              Players
             </Link>
           </li>
           <li className='nav-item'>
@@ -51,7 +51,7 @@ const Banner: React.FC<Props> = () => {
             </Link>
           </li>
         </ul>
-        {button && <Button buttonStyle='btn--outline' buttonSize='btn--medium'>DONATE</Button>}
+        {button && <Button buttonStyle='btn--outline'>DONATE</Button>}
       </div>
     </nav>
     </>
