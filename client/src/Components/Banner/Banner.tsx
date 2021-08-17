@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import NBALOGO from '../../../images/nba-logo.png';
 import Button from '../Button/Button';
@@ -23,12 +23,16 @@ const Banner: React.FC<Props> = () => {
     }
   }
 
+  useEffect(() => {
+    showButton();
+  }, []);
+
   window.addEventListener('resize', showButton);
   return (
     <>
     <nav className='navbar'>
       <div className='navbar-container'>
-        <Link to='/' className='navbar-logo'>
+        <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
           <img src={NBALOGO} className='nba-logo'/>
         </Link>
         <div className='menu-icon' onClick={handleClick}>
@@ -41,13 +45,18 @@ const Banner: React.FC<Props> = () => {
             </Link>
           </li>
           <li className='nav-item'>
-            <Link to='/' className="nav-links" onClick={closeMobileMenu}>
+            <Link to='/players' className="nav-links" onClick={closeMobileMenu}>
               Players
             </Link>
           </li>
           <li className='nav-item'>
-            <Link to='/' className="nav-links" onClick={closeMobileMenu}>
+            <Link to='/news' className="nav-links" onClick={closeMobileMenu}>
               News
+            </Link>
+          </li>
+          <li className='nav-item'>
+            <Link to='/donate' className="nav-links-mobile" onClick={closeMobileMenu}>
+              DONATE
             </Link>
           </li>
         </ul>
