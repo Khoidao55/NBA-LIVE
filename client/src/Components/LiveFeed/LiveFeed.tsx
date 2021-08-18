@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { liveOptions } from '../../../../API.js';
+import LiveTeam from '../LiveTeam/LiveTeam';
 import axios from 'axios';
 
 interface GameData {
@@ -25,10 +26,10 @@ const LiveFeed: React.FC = () => {
     return (
       <div className="livefeed-container">
         <div className="home-team">
-          <h1>{data.games[0].hTeam.fullName}</h1>
+          <LiveTeam teamName = {data.games[0].hTeam.fullName} />
         </div>
         <div className="away-team">
-
+          <LiveTeam teamName = {data.games[0].vTeam.fullName}/>
         </div>
         <h1>Live Feed</h1>
       </div>
