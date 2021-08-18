@@ -21,13 +21,21 @@ const LiveFeed: React.FC = () => {
 
   console.log(data);
   if(data.length !== 0){
+    const homeTeam = data.games[0].hTeam;
+    const awayTeam = data.games[0].vTeam;
     return (
       <div className="livefeed-container">
         <div className="home-team">
-          <LiveTeam teamName = {data.games[0].hTeam.fullName} />
+          <LiveTeam
+          teamName = {homeTeam.fullName}
+          logo = {homeTeam.logo}
+          />
         </div>
         <div className="away-team">
-          <LiveTeam teamName = {data.games[0].vTeam.fullName}/>
+          <LiveTeam
+          teamName = {awayTeam.fullName}
+          logo = {awayTeam.logo}
+          />
         </div>
         <h1>Live Feed</h1>
       </div>
