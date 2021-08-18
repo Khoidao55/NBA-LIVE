@@ -1,15 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { liveOptions } from '../../../../API.js';
 import LiveTeam from '../LiveTeam/LiveTeam';
+import { LiveGameData } from '../../types/LiveGameData';
 import axios from 'axios';
 
 interface GameData {
-  status: number,
-  filters: [],
-  games: [],
-  message: string,
-  results: number
+  results: LiveGameData[]
 }
+
 const LiveFeed: React.FC = () => {
   const [data, setData] = useState<GameData[]>([]);
 
