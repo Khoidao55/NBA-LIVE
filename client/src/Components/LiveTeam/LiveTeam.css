@@ -1,0 +1,8 @@
+.team-stat {
+  display: flex;
+}
+
+.team-logo {
+  width: 10%;
+  height: 10%;
+}
