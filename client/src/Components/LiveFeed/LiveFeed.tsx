@@ -29,12 +29,14 @@ const LiveFeed: React.FC = () => {
           <LiveTeam
           teamName = {homeTeam.fullName}
           logo = {homeTeam.logo}
+          points = {homeTeam.score.points}
           />
         </div>
         <div className="away-team">
           <LiveTeam
           teamName = {awayTeam.fullName}
           logo = {awayTeam.logo}
+          points = {awayTeam.score.points}
           />
         </div>
         <h1>Live Feed</h1>
