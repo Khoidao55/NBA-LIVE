@@ -33,9 +33,9 @@ const LiveFeed: React.FC = () => {
           //points = {}
           />
         </div>
-        <h1>{homeTeam.score.points}</h1>
+        <h1 className='home-points'>{homeTeam.score.points}</h1>
         <h2>VS</h2>
-        <h1>{awayTeam.score.points}</h1>
+        <h1 className='away-points'>{awayTeam.score.points}</h1>
         <div className="away-team">
           <LiveTeam
           teamName = {awayTeam.fullName}

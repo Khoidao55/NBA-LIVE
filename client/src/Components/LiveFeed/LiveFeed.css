@@ -2,4 +2,16 @@
   display: flex;
   margin: auto;
   width: 50%;
+  justify-content: center;
+  border: solid 1px black;
+}
+
+.home-points {
+  margin-right: 50px;
+  margin-top: 25px;
+}
+
+.away-points {
+  margin-left: 50px;
+  margin-top: 25px;
 }

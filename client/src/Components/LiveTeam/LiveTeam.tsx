@@ -10,7 +10,7 @@ const LiveTeam:React.FC<Props> = ({ teamName, logo, points }) => {
   return(
     <div className='team-stat'>
       <img src={logo} className='team-logo' />
-      <h1>{teamName}</h1>
+      <p>{teamName}</p>
     </div>
   )
 }
