@@ -3,6 +3,7 @@ import { liveOptions } from '../../../../API.js';
 import LiveTeam from '../LiveTeam/LiveTeam';
 import { LiveGameData } from '../../types/LiveGameData';
 import axios from 'axios';
+import './LiveFeed.css';
 
 interface GameData {
   results: LiveGameData[]
@@ -29,17 +30,19 @@ const LiveFeed: React.FC = () => {
           <LiveTeam
           teamName = {homeTeam.fullName}
           logo = {homeTeam.logo}
-          points = {homeTeam.score.points}
+          //points = {}
           />
+          <h1>{homeTeam.score.points}</h1>
         </div>
+        <h2>VS</h2>
         <div className="away-team">
+          <h1>{awayTeam.score.points}</h1>
           <LiveTeam
           teamName = {awayTeam.fullName}
           logo = {awayTeam.logo}
-          points = {awayTeam.score.points}
+          //points = {awayTeam.score.points}
           />
         </div>
-        <h1>Live Feed</h1>
       </div>
     );
   } else {

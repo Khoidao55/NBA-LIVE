@@ -1,8 +1,10 @@
 .team-stat {
   display: flex;
+  flex-direction: column;
 }
 
 .team-logo {
-  width: 10%;
-  height: 10%;
+  width: 100px;
+  height: 100px;
+  margin:auto;
 }
