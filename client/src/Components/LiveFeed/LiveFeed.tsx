@@ -30,7 +30,6 @@ const LiveFeed: React.FC = () => {
           <LiveTeam
           teamName = {homeTeam.fullName}
           logo = {homeTeam.logo}
-          //points = {}
           />
         </div>
         <h1 className='home-points'>{homeTeam.score.points}</h1>
@@ -40,7 +39,6 @@ const LiveFeed: React.FC = () => {
           <LiveTeam
           teamName = {awayTeam.fullName}
           logo = {awayTeam.logo}
-          //points = {awayTeam.score.points}
           />
         </div>
       </div>

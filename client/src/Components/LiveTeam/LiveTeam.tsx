@@ -4,9 +4,9 @@ import './LiveTeam.css';
 interface Props {
   teamName: string,
   logo: string,
-  points: string
 }
-const LiveTeam:React.FC<Props> = ({ teamName, logo, points }) => {
+
+const LiveTeam:React.FC<Props> = ({ teamName, logo }) => {
   return(
     <div className='team-stat'>
       <img src={logo} className='team-logo' />
