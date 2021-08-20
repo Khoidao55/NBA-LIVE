@@ -21,7 +21,20 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 app.use(express.static('public'));
 
-app.get('/getLiveData' , getLiveGameData);
+//caching middleware
+function cache(req, res, next) {
+  client.get('liveGame', (err, data) => {
+    if(err) throw err;
+
+    if(data !== null) {
+      res.send(data);
+    } else {
+      next();
+    }
+  })
+}
+
+app.get('/getLiveData', cache, getLiveGameData);
 
 app.listen(EXPRESS_PORT, () => {
   console.log("Listening on 3000, the best server");

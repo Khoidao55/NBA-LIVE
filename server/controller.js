@@ -15,7 +15,7 @@ module.exports.getLiveGameData = async (req, res) => {
     let liveData = await axios.get(liveOptions.url, {
       'headers': liveOptions.headers
     });
-    //console.log(liveData.data.api);
+    console.log(liveData.data.api);
     client.setex('liveGame', 3600, JSON.stringify(liveData.data.api));
     res.send(liveData.data.api);
   } catch (error) {
