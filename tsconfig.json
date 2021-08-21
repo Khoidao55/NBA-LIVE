@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "outDir": "dist",
+    "target": "ES2017",
     "sourceMap": true,
     "lib": [
       "dom",
@@ -23,5 +24,6 @@
   },
   "include": [
     "client",
+    "server"
   ]
 }

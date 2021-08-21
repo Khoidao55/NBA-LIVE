@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon ./server/server.js",
-    "react-dev": "webpack --watch"
+    "react-dev": "webpack --watch",
+    "ts-dev": "tsc --watch --preserveWatchOutput"
   },
   "repository": {
     "type": "git",
